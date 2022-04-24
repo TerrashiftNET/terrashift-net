@@ -2471,8 +2471,8 @@ textarea {
     background: var(--section-bg);
     font-family: var(--body-font);
     overflow: hidden;
-    padding: calc(3.4rem + 1vw) var(--page-margin);
-    margin: calc(2.55rem + 1vw) 0 0;
+    padding: calc(0.1rem + 0.1vw) var(--page-margin);
+    margin: calc(11.5rem + 1vw) 0 0;
     text-align: center
 }
 
