@@ -2467,6 +2467,7 @@ textarea {
     fill: var(--gray)
 }
 
+@media (min-width: 992px) {
 .footer {
     background: var(--section-bg);
     font-family: var(--body-font);
@@ -2474,6 +2475,7 @@ textarea {
     padding: calc(0.1rem + 0.1vw) var(--page-margin);
     margin: calc(11.5rem + 1vw) 0 0;
     text-align: center
+    }
 }
 
 @media (min-width: 768px) {
