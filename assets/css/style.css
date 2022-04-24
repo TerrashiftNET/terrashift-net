@@ -2476,6 +2476,17 @@ textarea {
     text-align: center
 }
 
+@media (min-width: 768px) {
+	.footer {
+        background: var(--section-bg);
+        font-family: var(--body-font);
+        overflow: hidden;
+        padding: calc(2rem + 1vw) var(--page-margin);
+        margin: calc(2rem + 1vw) 0 0;
+        text-align: center
+	}
+}
+
 .footer__social svg {
     fill: var(--white);
     height: .9374999997rem;
