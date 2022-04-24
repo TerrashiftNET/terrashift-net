@@ -2467,7 +2467,7 @@ textarea {
     fill: var(--gray)
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
 .footer {
     background: var(--section-bg);
     font-family: var(--body-font);
