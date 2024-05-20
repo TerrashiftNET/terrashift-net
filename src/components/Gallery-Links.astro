@@ -1,0 +1,44 @@
+<div id="gallery-links"> 
+    <a href="/gallery/s2">Season 2</a>
+    <a href="/gallery/s3">Season 3</a>
+    <a href="/gallery">Current Season</a>
+</div>
+
+<style>
+    #gallery-links {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    #gallery-links a {
+        margin: 0 10px;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+    }
+
+    #gallery-links a:hover {
+        text-decoration: underline;
+    }
+
+    #gallery-links a:active {
+        color: #ff0000;
+    }
+
+    @media (max-width: 768px) {
+        #gallery-links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #gallery-links a {
+            margin: 5px 0;
+        }
+
+        #gallery-links a::after {
+            content: "";
+        }
+    }
+</style>

@@ -2,15 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
+import SpawnImage from "../assets/terrashift-spawn.png"
+import {Image} from "astro:assets"
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
   <main>
-    <img
+    <Image
       id="spawn-image"
-      alt="Terrashift spawn image"
-      src="https://media.discordapp.net/attachments/1191746174684758037/1241764852783910942/2023-11-21_16.52.55.png?ex=664b6323&is=664a11a3&hm=140ac8b994d5ea043d31355c812cab72ba58e46b5f91dfcd3447f4916833bfb5&=&format=webp&quality=lossless&width=1060&height=662"
+      alt="Terrashift spawn"
+      src={SpawnImage}
+      loading="lazy"
     />
     <p>
       Terrashift is a whitelisted vanilla Minecraft server with collaboration
@@ -46,12 +49,16 @@ import Header from "../components/Header.astro";
     }
 
     p {
-      
+      text-align: center;
       padding: 0 10px;
     }
     #spawn-image {
       border-radius: 10px;
       max-width: 500px; !important;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 20px;
     }
   </style>
 </Layout>

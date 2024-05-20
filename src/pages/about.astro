@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout title="Home | Terrashift">
+  <Header />
+  <main>
+  <div id="content">
+    <div id="rules">
+      <h1>Server Rules</h1>
+      <ul>
+        <li>no griefing</li>
+        <li>no stealing</li>
+        <li>no pvp without consent from all parties</li>
+        <li>no rudeness towards fellow members</li>
+        <li>
+          no "hacking" like x-ray/fly/general mods that give unfair advantages or
+          abilities not possible in vanilla.
+        </li>
+        </ul>
+    </div>
+    <div id="datapacks">
+        <h1>Datapacks</h1>
+        <ul>
+          <li>
+            AFK display: Tab list will grey out players inactive more than 5
+            minutes
+          </li>
+          <li>anti-enderman grief: Enderman can't move blocks</li>
+          <li>
+            armor statues: Adds a unique book for customizing armor stands/item
+            displays
+          </li>
+          <li>craftable bundles: adds the crafting recipe for bundles.</li>
+          <li>craftable rooted dirt: dirt + hanging root</li>
+          <li>craftable spore blossom: glow_berries, allium, big dripleaf</li>
+          <li>
+            fast leaf decay: leaves decay very fast if no connection to wood
+          </li>
+          <li>
+            home TPs: 1 home teleport, commands - /trigger home set [1] ,
+            /trigger sethome set [1], /trigger home for main one
+          </li>
+          <li>
+            name colors: /trigger color to change the color of your name in game
+          </li>
+          <li>spawn TPs: /trigger spawn to teleport to spawn</li>
+          <li>Stonecutter cuts all: wood recipes in stonecutter</li>
+          <li>
+            Wandering Trades: wandering trades offer mini-blocks Universal
+            Dyeing: allows the redyeing of any dyeable block (excluding
+            concrete).
+          </li>
+          <li>
+            Universal Dyeing: allows the redyeing of any dyeable block
+            (excluding concrete).
+          </li>
+        </ul>
+        </div>
+        <div id="mods">
+        <h1>Mods</h1>
+          <ul>
+            <li>Elytra Trims: allows for elytra customisation</li>
+            <li>
+              Anti Ender Dragon Grief: prevents most blocks from being destroyed
+              by the dragon
+            </li>
+          </ul>
+        </div>
+    </div>
+    </main>
+</Layout>
+    
+    <style>
+        #content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        #rules {
+            grid-column: 1 / 3;
+        }
+
+        #datapacks {
+            grid-column: 1 / 2;
+        }
+
+        #mods {
+            grid-column: 2 / 3;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: circle; 
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        main {
+            /* align page content to page center */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            #content {
+                grid-template-columns: 1fr;
+            }
+
+            #rules {
+                grid-column: 1 / 2;
+            }
+
+            #datapacks {
+                grid-column: 1 / 2;
+            }
+
+            #mods {
+                grid-column: 1 / 2;
+            }
+        }
+      </style>
+    </div>
+  </div>
+</Layout>
