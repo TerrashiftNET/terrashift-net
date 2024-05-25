@@ -40,17 +40,16 @@ import {Image} from "astro:assets"
       line-height: 1.6;
     }
 
-    /* img {
+    img {
       width: 100%;
       max-width: 150px;
       display: block;
       margin: 0 auto;
-    } */
+    }
 
     p {
       text-align: center;
       padding: 0 10px;
-      font-size: 20px;
     }
     #spawn-image {
       border-radius: 10px;
@@ -59,6 +58,22 @@ import {Image} from "astro:assets"
       display: block;
       margin: 0 auto;
       padding: 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+      main {
+        font-size: 18px;
+      }
+
+      #spawn-image {
+        max-width: 300px;
+      }
+
+      img {
+        max-width: 100px;
+      }
+      
+      
     }
   </style>
 </Layout>
