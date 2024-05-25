@@ -86,9 +86,11 @@ const images = await Astro.glob("../assets/gallery/current/*.png").then(
 </style>
 
 <script>
-  document.querySelectorAll("img").forEach((img) => {
-    img.addEventListener("click", () => {
-      img.classList.toggle("big");
+  if (window.innerWidth > 768) {
+    document.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("click", () => {
+        img.classList.toggle("big");
+      });
     });
-  });
+  }
 </script>
