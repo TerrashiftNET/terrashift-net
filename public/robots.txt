@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /downloads
+Sitemap: https://terrashift.net/sitemap-index.xml
