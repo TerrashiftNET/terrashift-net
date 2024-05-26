@@ -16,9 +16,9 @@ import { Image } from "astro:assets";
     <a href="https://apply.terrashift.net" id="apply">Apply</a>
   </div>
   <div id="mobile-nav">
-    <button id="mobile-nav-toggle">☰</button>
+    <button id="mobile-nav-toggle" transition:persist>☰</button>
   </div>
-  <div id="mobile-nav-items">
+  <div id="mobile-nav-items" transition:persist>
     <a href="/about">About Us</a>
     <a href="https://map.terrashift.net">LiveMap</a>
     <a href="https://stats.terrashift.net">Player Stats</a>
@@ -26,103 +26,29 @@ import { Image } from "astro:assets";
     <a href="https://ko-fi.com/terrashift">Support Us</a>
     <a href="https://apply.terrashift.net" id="apply">Apply</a>
   </div>
-</div>
 
-<style>
-  #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-  }
-
-  #logo img {
-    height: 100px;
-    width: auto;
-  }
-
-  #nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-
-  #nav a:hover {
-    background-color: #555;
-  }
-
-  #apply {
-    background-color: #4caf50;
-    border-radius: 5px;
-  }
-
-  #apply:hover {
-    background-color: #3e8e41 !important;
-  }
-
-  #mobile-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    width: 100%;
-  }
-
-  #mobile-nav-items {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  @media (max-width: 768px) {
+  <style>
     #header {
-      flex-direction: column;
-      padding: 10px;
-    }
-    #logo img {
-      height: 50px;
-    }
-
-    #nav {
-      display: none;
-    }
-
-    #mobile-nav {
       display: flex;
-      flex-direction: column;
-      width: 100%;
+      justify-content: space-between;
       align-items: center;
-    }
-
-    #mobile-nav-items {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-    }
-
-    #mobile-nav-toggle {
-      display: block;
+      padding: 10px 20px;
       background-color: #333;
       color: white;
-      border: none;
-      font-size: 20px;
-      width: 50px;
     }
 
-    #mobile-nav-toggle:hover {
-      background-color: #555;
+    #logo img {
+      height: 100px;
+      width: auto;
     }
 
-    #mobile-nav-items a {
+    #nav a {
       color: white;
       text-decoration: none;
       padding: 10px;
     }
 
-    #mobile-nav-items a:hover {
+    #nav a:hover {
       background-color: #555;
     }
 
@@ -134,15 +60,89 @@ import { Image } from "astro:assets";
     #apply:hover {
       background-color: #3e8e41 !important;
     }
-  }
-</style>
 
-<script is:inline data-astro-rerun>
-  const mobileNavToggle = document.getElementById("mobile-nav-toggle");
-  const mobileNavItems = document.getElementById("mobile-nav-items");
+    #mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      width: 100%;
+    }
 
-  mobileNavToggle.addEventListener("click", () => {
-    mobileNavItems.style.display =
-      mobileNavItems.style.display === "none" ? "flex" : "none";
-  });
-</script>
+    #mobile-nav-items {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      #header {
+        flex-direction: column;
+        padding: 10px;
+      }
+      #logo img {
+        height: 50px;
+      }
+
+      #nav {
+        display: none;
+      }
+
+      #mobile-nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+
+      #mobile-nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
+      #mobile-nav-toggle {
+        display: block;
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 20px;
+        width: 50px;
+      }
+
+      #mobile-nav-toggle:hover {
+        background-color: #555;
+      }
+
+      #mobile-nav-items a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      #mobile-nav-items a:hover {
+        background-color: #555;
+      }
+
+      #apply {
+        background-color: #4caf50;
+        border-radius: 5px;
+      }
+
+      #apply:hover {
+        background-color: #3e8e41 !important;
+      }
+    }
+  </style>
+
+  <script is:inline data-astro-rerun>
+    const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+    const mobileNavItems = document.getElementById("mobile-nav-items");
+
+    mobileNavToggle.addEventListener("click", () => {
+      mobileNavItems.style.display =
+        mobileNavItems.style.display === "none" ? "flex" : "none";
+    });
+  </script>
+</div>
