@@ -5,6 +5,6 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://terrashift.net',
-  integrations: [sitemap(), compress()]
+  site: "https://terrashift.net",
+  integrations: [sitemap(), compress()],
 });
