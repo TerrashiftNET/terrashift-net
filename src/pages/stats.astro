@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import SpawnImage from "../assets/terrashift-spawn.png";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Home | Terrashift">
+  <Header />
+  <main>
+    <iframe width="100%" height="auto" src="https://stats.terrashift.net/"
+    ></iframe>
+  </main>
+
+  <style>
+    main {
+      margin: auto;
+      padding: 1rem;
+      width: 800px;
+      max-width: calc(100% - 2rem);
+      color: white;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</Layout>
