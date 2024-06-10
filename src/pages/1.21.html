@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Countdown Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="container">
+      <img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/MCV_TrickyTrials_name_announce_1170x500.jpg" />
+      <h1>Minecraft 1.21</h1>
+      <div id="timer">
+        <!-- Countdown timer will be displayed here -->
+        <div id="days">
+          <p id="days-amount">0</p>
+          <p id="title">Days</p>
+        </div>
+        <div id="hours">
+          <p id="hours-amount">0</p>
+          <p id="title">Hours</p>
+        </div>
+        <div id="minutes">
+          <p id="minutes-amount">0</p>
+          <p id="title">Minutes</p>
+        </div>
+        <div id="seconds">
+          <p id="seconds-amount">0</p>
+          <p id="title">Seconds</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const countdownTime = 1718280000;
+      const currentTime = Math.floor(Date.now() / 1000);
+
+      const timeRemaining = countdownTime - currentTime;
+
+      const days = Math.floor(timeRemaining / 86400);
+      const hours = Math.floor((timeRemaining % 86400) / 3600);
+      const minutes = Math.floor((timeRemaining % 3600) / 60);
+      const seconds = timeRemaining % 60;
+
+      // display the remaining time and refresh every second
+      if (timeRemaining > 0) {
+        document.getElementById("days-amount").innerText = days;
+        document.getElementById("hours-amount").innerText = hours;
+        document.getElementById("minutes-amount").innerText = minutes;
+        document.getElementById("seconds-amount").innerText = seconds;
+        setInterval(() => {
+          const currentTime = Math.floor(Date.now() / 1000);
+          const timeRemaining = countdownTime - currentTime;
+
+          if (timeRemaining > 0) {
+            const days = Math.floor(timeRemaining / 86400);
+            const hours = Math.floor((timeRemaining % 86400) / 3600);
+            const minutes = Math.floor((timeRemaining % 3600) / 60);
+            const seconds = timeRemaining % 60;
+
+            document.getElementById("days-amount").innerText = days;
+            document.getElementById("hours-amount").innerText = hours;
+            document.getElementById("minutes-amount").innerText = minutes;
+            document.getElementById("seconds-amount").innerText = seconds;
+          } else {
+            document.getElementById("days-amount").innerText = 0;
+            document.getElementById("hours-amount").innerText = 0;
+            document.getElementById("minutes-amount").innerText = 0;
+            document.getElementById("seconds-amount").innerText = 0;
+          }
+        }, 1000);
+      } else {
+        document.getElementById("days-amount").innerText = 0;
+        document.getElementById("hours-amount").innerText = 0;
+        document.getElementById("minutes-amount").innerText = 0;
+        document.getElementById("seconds-amount").innerText = 0;
+      }
+    </script>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, sans-serif;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+    }
+
+    #timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #days,
+    #hours,
+    #minutes,
+    #seconds {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+      color: white;
+      background-color: #333;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      padding: 10px;
+    }
+
+    #days-amount,
+    #hours-amount,
+    #minutes-amount,
+    #seconds-amount {
+      font-size: 5rem;
+      font-weight: bold;
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid white;
+    }
+
+    #days-amount {
+      color: #ff6347;
+    }
+
+    #hours-amount {
+      color: #ffd700;
+    }
+
+    #minutes-amount {
+      color: #00ff00;
+    }
+
+    #seconds-amount {
+      color: #00bfff;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    #title {
+      padding-top: 10px;
+    }
+
+    img {
+      width: 500px;
+    }
+
+    @media screen and (max-width: 600px) {
+      #days-amount,
+      #hours-amount,
+      #minutes-amount,
+      #seconds-amount {
+        font-size: 3rem;
+      }
+
+      #days,
+      #hours,
+      #minutes,
+      #seconds {
+        padding: 5px;
+      }
+
+      #title {
+        padding-top: 5px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      #timer {
+        flex-direction: column;
+      }
+
+      #days,
+      #hours,
+      #minutes,
+      #seconds {
+        margin: 5px;
+      }
+
+      #days-amount {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      img {
+        display: none;
+      }
+    }
+  </style>
+</html>
