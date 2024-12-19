@@ -4,17 +4,17 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import GalleyLinks from "../../components/Gallery-Links.astro";
 
-const images = await Astro.glob("../../assets/gallery/ng/*.png").then(
+const images = await Astro.glob("../../assets/gallery/s4/*.png").then(
   (files) => {
     return files.map((file) => file.default);
   }
 );
 ---
 
-<Layout title="Terrashift | NG Gallery">
+<Layout title="Terrashift | S4 Gallery">
   <Header />
   <div id="container">
-    <h1>Season 0/NG Gallery</h1>
+    <h1>Season 4 Gallery</h1>
     <GalleyLinks />
     <div id="gallery">
       {
