@@ -8,10 +8,7 @@ import GalleyLinks from "../../components/Gallery-Links.astro";
 const images = Object.values(
   import.meta.glob<{ default: ImageMetadata }>(
     "../../assets/gallery/s5/*.png",
-    {
-      eager: true,
-      as: "url",
-    }
+    { eager: true, query: "?url", import: "default" }
   )
 );
 ---
