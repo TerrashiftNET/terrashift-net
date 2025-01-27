@@ -1,6 +1,7 @@
 ---
 import favicon from "../assets/favicon.png";
 import { Image } from "astro:assets";
+import "../styles/global.css";
 ---
 
 <div id="header">
@@ -49,17 +50,17 @@ import { Image } from "astro:assets";
     }
 
     #nav a:hover {
-      background-color: rgba(147, 153, 170, 0.2)
+      background-color: rgba(147, 153, 170, 0.2);
     }
 
     #apply {
-      background-color: ##cba6f7;
+      background-color: #cba6f7;
       color: #4c4f69 !important;
       border-radius: 5px;
     }
 
     #apply:hover {
-      background-color: #80b07c !important;
+      background-color: #c092f9 !important;
     }
 
     #mobile-nav {
@@ -93,6 +94,7 @@ import { Image } from "astro:assets";
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 100%;
         align-items: center;
       }
 
@@ -127,12 +129,12 @@ import { Image } from "astro:assets";
       }
 
       #apply {
-        background-color: #4caf50;
+        background-color: #cba6f7;
         border-radius: 5px;
       }
 
       #apply:hover {
-        background-color: #3e8e41 !important;
+        background-color: #c092f9;
       }
     }
   </style>

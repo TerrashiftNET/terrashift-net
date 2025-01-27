@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+  #gallery-image:hover:not(.big) {
+    transform: scale(1.1);
+  }
+
+  #gallery-image.big {
+    width: auto;
+    height: 80%;
+    object-fit: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
+    animation: zoom 0.5s;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 1rem;
+  }

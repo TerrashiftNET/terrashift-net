@@ -5,133 +5,94 @@ import Header from "../components/Header.astro";
 
 <Layout title="Home | Terrashift">
   <Header />
-  <main>
-  <div id="content">
-    <div id="rules">
-      <h1>Server Rules</h1>
-      <ul>
-        <li>no griefing</li>
-        <li>no stealing</li>
-        <li>no pvp without consent from all parties</li>
-        <li>no rudeness towards fellow members</li>
-        <li>
-          no "hacking" like x-ray/fly/general mods that give unfair advantages or
-          abilities not possible in vanilla.
-        </li>
+  <main
+    class="flex flex-col items-center justify-center p-1 h-full text-[#cdd6f4]"
+  >
+    <div class="gap-5 p-5 m-5 align-center flex justify-center">
+      <div id="rules" class="flex-1">
+        <h1 class="text-2xl mb-2.5">Server Rules</h1>
+        <ul class="list-disc p-0">
+          <li class="mb-2.5">no griefing</li>
+          <li class="mb-2.5">no stealing</li>
+          <li class="mb-2.5">no pvp without consent from all parties</li>
+          <li class="mb-2.5">no rudeness towards fellow members</li>
+          <li class="mb-2.5">
+            no "hacking" like x-ray/fly/general mods that give unfair advantages
+            or abilities not possible in vanilla.
+          </li>
         </ul>
-    </div>
-    <div id="datapacks">
-        <h1>Datapacks</h1>
-        <ul>
-          <li>
+      </div>
+      <div id="datapacks" class="flex-1">
+        <h1 class="text-2xl mb-2.5">Datapacks</h1>
+        <ul class="list-disc p-0">
+          <li class="mb-2.5">
             AFK display: Tab list will grey out players inactive more than 5
             minutes
           </li>
-          <li>anti-enderman grief: Enderman can't move blocks</li>
-          <li>
+          <li class="mb-2.5">
+            anti-enderman grief: Enderman can't move blocks
+          </li>
+          <li class="mb-2.5">
             armor statues: Adds a unique book for customizing armor stands/item
             displays
           </li>
-          <li>craftable bundles: adds the crafting recipe for bundles.</li>
-          <li>craftable rooted dirt: dirt + hanging root</li>
-          <li>craftable spore blossom: glow_berries, allium, big dripleaf</li>
-          <li>
+          <li class="mb-2.5">
+            coordinate HUD: small coordinate/time/compass display above
+            healthbar. Enable/disable with /trigger ch_toggle
+          </li>
+          <li class="mb-2.5">
             fast leaf decay: leaves decay very fast if no connection to wood
           </li>
-          <li>
+          <li class="mb-2.5">
             home TPs: 1 home teleport, commands - /trigger home set [1] ,
             /trigger sethome set [1], /trigger home for main one
           </li>
-          <li>
+          <li class="mb-2.5">
             name colors: /trigger color to change the color of your name in game
           </li>
-          <li>spawn TPs: /trigger spawn to teleport to spawn</li>
-          <li>Stonecutter cuts all: wood recipes in stonecutter</li>
-          <li>
+          <li class="mb-2.5">spawn TPs: /trigger spawn to teleport to spawn</li>
+          <li class="mb-2.5">
+            Stonecutter cuts all: wood recipes in stonecutter
+          </li>
+          <li class="mb-2.5">
             Wandering Trades: wandering trades offer mini-blocks.
           </li>
-          <li>
+          <li class="mb-2.5">
             Universal Dyeing: allows the redyeing of any dyeable block
             (excluding concrete).
           </li>
         </ul>
-        </div>
-        <div id="mods">
-        <h1>Mods</h1>
-          <ul>
-            <li>Elytra Trims: allows for elytra customisation</li>
-            <li>
-              Anti Ender Dragon Grief: prevents most blocks from being destroyed
-              by the dragon
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div id="mods" class="flex-1">
+        <h1 class="text-2xl mb-2.5">Mods</h1>
+        <ul class="list-disc p-0">
+          <li class="mb-2.5">Elytra Trims: allows for elytra customisation</li>
+          <li class="mb-2.5">
+            Anti Ender Dragon Grief: prevents most blocks from being destroyed
+            by the dragon
+          </li>
+          <li class="mb-2.5">
+            carpet player bots: you can summon bot players to afk farms for you.
+            First ask a @mod to link a bot to you. Once a bot is linked you can
+            use the /player subcommands to summon/control the bot. There is a
+            global limit of 3 bots at the same time on the server. Details on
+            how to use the commands
+            <a
+              class="text-blue-500 hover:text-blue-700 hover:underline"
+              href="https://github.com/gnembon/fabric-carpet/wiki/Commands#player"
+              >here</a
+            >
+          </li>
+          <li class="mb-2.5">
+            Voice chat: in-game voice chat, requires
+            <a
+              href="https://modrinth.com/plugin/simple-voice-chat"
+              class="text-blue-500 hover:text-blue-700 hover:underline"
+              >https://modrinth.com/plugin/simple-voice-chat</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    </main>
-</Layout>
-    
-    <style>
-        #content {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 20px;
-            padding: 20px;
-            margin: 20px;
-        }
-
-        #rules {
-            grid-column: 1 / 3;
-        }
-
-        #datapacks {
-            grid-column: 1 / 2;
-        }
-
-        #mods {
-            grid-column: 2 / 3;
-        }
-
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: circle; 
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        main {
-            /* align page content to page center */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            color: #cdd6f4;
-        }
-
-        @media (max-width: 768px) {
-            #content {
-                grid-template-columns: 1fr;
-            }
-
-            #rules {
-                grid-column: 1 / 2;
-            }
-
-            #datapacks {
-                grid-column: 1 / 2;
-            }
-
-            #mods {
-                grid-column: 1 / 2;
-            }
-        }
-      </style>
-    </div>
-  </div>
+  </main>
 </Layout>
